@@ -49,6 +49,7 @@ const states = [
 
 export const WaitlistForm = () => {
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     phone: "",
     income: "",
@@ -66,10 +67,8 @@ export const WaitlistForm = () => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Log form data for debugging
     console.log("Form submission:", { ...formData, selectedServices });
     
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
@@ -77,8 +76,8 @@ export const WaitlistForm = () => {
       description: "We'll notify you when Tern Health launches in your area.",
     });
     
-    // Reset form
     setFormData({
+      name: "",
       email: "",
       phone: "",
       income: "",
@@ -113,6 +112,18 @@ export const WaitlistForm = () => {
         </div>
         <form onSubmit={handleSubmit} className="mx-auto mt-10 max-w-xl space-y-6">
           <div className="space-y-4">
+            <div>
+              <Label htmlFor="name">Name</Label>
+              <Input
+                id="name"
+                type="text"
+                required
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+              />
+            </div>
+
             <div>
               <Label htmlFor="email">Email</Label>
               <Input
