@@ -1,9 +1,9 @@
-import { Shield, Heart, DollarSign, Clock } from "lucide-react";
+import { Shield, Heart, DollarSign } from "lucide-react";
 
 const features = [
   {
-    name: 'Affordable Coverage',
-    description: 'Plans designed to fit your budget without compromising on quality care.',
+    name: 'NYC Restaurant Worker Coverage',
+    description: 'Tailored healthcare plans designed specifically for NYC restaurant and hospitality workers.',
     icon: DollarSign,
   },
   {
@@ -13,13 +13,8 @@ const features = [
   },
   {
     name: 'Quality Care',
-    description: 'Access to a network of trusted healthcare providers and specialists.',
+    description: 'Access to a network of trusted NYC healthcare providers and specialists.',
     icon: Heart,
-  },
-  {
-    name: '24/7 Support',
-    description: 'Round-the-clock customer service and medical advice when you need it.',
-    icon: Clock,
   },
 ];
 
@@ -30,11 +25,11 @@ export const Features = () => {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-tern-600">Why Choose Tern</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need in healthcare coverage
+            Healthcare coverage for NYC hospitality workers
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col items-center text-center">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-tern-100">
