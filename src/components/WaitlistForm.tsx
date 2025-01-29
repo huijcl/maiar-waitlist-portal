@@ -27,7 +27,7 @@ export const WaitlistForm = () => {
     console.log("Form submission:", { ...formData, selectedServices });
     
     try {
-      const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLScE-NgdCbWjbIGYt7Stteji0-ssrziySj0cdtBARfMBTTDX7A/formResponse";
+      const formUrl = "try updating with this URL";
       
       // Create form data to send
       const googleFormData = new FormData();
@@ -42,14 +42,17 @@ export const WaitlistForm = () => {
       googleFormData.append("entry.1234567898", selectedServices.join(", "));
       googleFormData.append("entry.1234567899", formData.otherServices);
 
+      console.log("Submitting to URL:", formUrl);
+      console.log("Form data being sent:", Object.fromEntries(googleFormData));
+
       // Send data to Google Form
-      await fetch(formUrl, {
+      const response = await fetch(formUrl, {
         method: "POST",
         mode: "no-cors",
         body: googleFormData
       });
 
-      console.log("Form submitted successfully");
+      console.log("Form submission completed", response);
       
       toast({
         title: "Successfully joined waitlist!",
