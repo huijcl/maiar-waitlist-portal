@@ -14,7 +14,7 @@ export const Hero = () => {
             Healthcare coverage that works for you
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl">
-            Join Tern Health for affordable, flexible healthcare coverage designed for modern life. Simple plans, transparent pricing, and exceptional care.
+            Join Maiar Health for affordable, flexible healthcare coverage designed for modern life. Simple plans, transparent pricing, and exceptional care.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <Button 
