@@ -13,7 +13,7 @@ export const Hero = () => {
           <img 
             src="/lovable-uploads/163cc1f1-a5e8-48a7-9e6e-ce879099eba2.png" 
             alt="Maiar Health Logo" 
-            className="h-24 mb-12 w-auto"
+            className="h-48 mb-12 w-auto"
           />
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Healthcare coverage that works for you
