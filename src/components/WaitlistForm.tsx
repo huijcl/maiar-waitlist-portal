@@ -30,7 +30,7 @@ export const WaitlistForm = () => {
     
     toast({
       title: "Successfully joined waitlist!",
-      description: "We'll notify you when Tern Health launches in your area.",
+      description: "We'll notify you when Maiar Health launches in your area.",
     });
     
     setFormData({
@@ -56,7 +56,7 @@ export const WaitlistForm = () => {
             Join our waitlist
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600">
-            Be the first to know when Tern Health launches in your area. Early members get exclusive benefits and priority access.
+            Be the first to know when Maiar Health launches in your area. We're gauging demand to ensure we build the best coverage network for your needs. Early members get exclusive benefits and priority access.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="mx-auto mt-10 max-w-xl space-y-6">

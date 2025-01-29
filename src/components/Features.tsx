@@ -3,7 +3,7 @@ import { Shield, Heart, DollarSign } from "lucide-react";
 const features = [
   {
     name: 'NYC Restaurant Worker Coverage',
-    description: 'Tailored healthcare plans designed specifically for NYC restaurant and hospitality workers.',
+    description: 'Tailored healthcare coverage designed specifically for NYC restaurant and hospitality workers.',
     icon: DollarSign,
   },
   {
@@ -26,6 +26,9 @@ export const Features = () => {
           <h2 className="text-base font-semibold leading-7 text-tern-600">Why Choose Maiar</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Healthcare coverage for NYC hospitality workers
+          </p>
+          <p className="mt-4 text-sm text-gray-500">
+            Note: We currently provide coverage for primary care visits and lab work with affordable copays. This is not a comprehensive health insurance plan.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
