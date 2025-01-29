@@ -31,31 +31,32 @@ export const WaitlistForm = () => {
       
       // Create form data to send
       const googleFormData = new FormData();
-      googleFormData.append("entry.hj99tb2", formData.name);
-      googleFormData.append("entry.hj99tb4", formData.email);
-      googleFormData.append("entry.hj99tb6", formData.phone);
-      googleFormData.append("entry.hj99tb8", formData.income);
-      googleFormData.append("entry.hj99tb10", formData.age);
-      googleFormData.append("entry.hj99tb12", formData.industry);
-      googleFormData.append("entry.hj99tb14", formData.healthcareCoverage);
-      googleFormData.append("entry.hj99tb16", formData.stateOfResidence);
-      googleFormData.append("entry.hj99tb18", selectedServices.join(", "));
-      googleFormData.append("entry.hj99tb20", formData.otherServices);
+      googleFormData.append("entry.1234567890", formData.name);
+      googleFormData.append("entry.1234567891", formData.email);
+      googleFormData.append("entry.1234567892", formData.phone);
+      googleFormData.append("entry.1234567893", formData.income);
+      googleFormData.append("entry.1234567894", formData.age);
+      googleFormData.append("entry.1234567895", formData.industry);
+      googleFormData.append("entry.1234567896", formData.healthcareCoverage);
+      googleFormData.append("entry.1234567897", formData.stateOfResidence);
+      googleFormData.append("entry.1234567898", selectedServices.join(", "));
+      googleFormData.append("entry.1234567899", formData.otherServices);
 
       // Send data to Google Form
-      const response = await fetch(formUrl, {
+      await fetch(formUrl, {
         method: "POST",
-        mode: "no-cors", // This is required for Google Forms
+        mode: "no-cors",
         body: googleFormData
       });
 
-      console.log("Form submission response:", response);
+      console.log("Form submitted successfully");
       
       toast({
         title: "Successfully joined waitlist!",
         description: "We'll notify you when Maiar Health launches in your area.",
       });
       
+      // Reset form
       setFormData({
         name: "",
         email: "",
