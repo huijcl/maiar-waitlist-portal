@@ -11,7 +11,7 @@ export const Hero = () => {
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="flex flex-col items-center text-center">
           <img 
-            src="/maiar-logo.png" 
+            src="/lovable-uploads/163cc1f1-a5e8-48a7-9e6e-ce879099eba2.png" 
             alt="Maiar Health Logo" 
             className="h-24 mb-12 w-auto"
           />
