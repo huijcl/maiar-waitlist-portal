@@ -26,26 +26,58 @@ export const WaitlistForm = () => {
     
     console.log("Form submission:", { ...formData, selectedServices });
     
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Successfully joined waitlist!",
-      description: "We'll notify you when Maiar Health launches in your area.",
-    });
-    
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      income: "",
-      age: "",
-      industry: "",
-      healthcareCoverage: "",
-      stateOfResidence: "",
-      otherServices: ""
-    });
-    setSelectedServices([]);
-    setIsLoading(false);
+    try {
+      const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLScE-NgdCbWjbIGYt7Stteji0-ssrziySj0cdtBARfMBTTDX7A/formResponse";
+      
+      // Create form data to send
+      const googleFormData = new FormData();
+      googleFormData.append("entry.1234567890", formData.name); // Replace with actual entry IDs
+      googleFormData.append("entry.1234567891", formData.email);
+      googleFormData.append("entry.1234567892", formData.phone);
+      googleFormData.append("entry.1234567893", formData.income);
+      googleFormData.append("entry.1234567894", formData.age);
+      googleFormData.append("entry.1234567895", formData.industry);
+      googleFormData.append("entry.1234567896", formData.healthcareCoverage);
+      googleFormData.append("entry.1234567897", formData.stateOfResidence);
+      googleFormData.append("entry.1234567898", selectedServices.join(", "));
+      googleFormData.append("entry.1234567899", formData.otherServices);
+
+      // Send data to Google Form
+      const response = await fetch(formUrl, {
+        method: "POST",
+        mode: "no-cors", // This is required for Google Forms
+        body: googleFormData
+      });
+
+      console.log("Form submission response:", response);
+      
+      toast({
+        title: "Successfully joined waitlist!",
+        description: "We'll notify you when Maiar Health launches in your area.",
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        income: "",
+        age: "",
+        industry: "",
+        healthcareCoverage: "",
+        stateOfResidence: "",
+        otherServices: ""
+      });
+      setSelectedServices([]);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error joining waitlist",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
