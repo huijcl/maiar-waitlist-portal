@@ -27,7 +27,7 @@ export const WaitlistForm = () => {
     console.log("Form submission:", { ...formData, selectedServices });
     
     try {
-      const formUrl = "https://forms.gle/eREJCMizq4mMMqgt5";
+      const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLScE-NgdCbWjbIGYt7Stteji0-ssrziySj0cdtBARfMBTTDX7A/formResponse";
       
       // Create form data to send
       const googleFormData = new FormData();
