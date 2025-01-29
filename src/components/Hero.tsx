@@ -16,7 +16,7 @@ export const Hero = () => {
             className="h-48 mb-12 w-auto"
           />
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Healthcare coverage that works for you
+            Healthcare Coverage for Restaurant Workers
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl">
             Join Maiar Health for affordable, flexible healthcare coverage designed for modern life. Simple plans, transparent pricing, and exceptional care.
