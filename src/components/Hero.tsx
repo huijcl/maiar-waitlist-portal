@@ -10,6 +10,11 @@ export const Hero = () => {
     <div className="relative overflow-hidden bg-white">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="flex flex-col items-center text-center">
+          <img 
+            src="/maiar-logo.png" 
+            alt="Maiar Health Logo" 
+            className="h-24 mb-12 w-auto"
+          />
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Healthcare coverage that works for you
           </h1>
